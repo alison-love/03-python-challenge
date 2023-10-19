@@ -1,5 +1,3 @@
-#TEST
-
 import os
 import csv
 
@@ -22,14 +20,14 @@ budget_data_csv = os.path.join("/Users/alisonlove/Bootcamp/Module Challenges/pyt
 with open(budget_data_csv) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
     
+    # store the header
     financial_header = next(csv_reader)
     
-    #start count for number of months
+    # start count for number of months
     num_months = 0
 
-    # 
     for row in csv_reader:
-        #add one to months as a new month occurs
+        # add one to months as a new month occurs
         num_months += 1
 
         date_str = row[0]
@@ -50,10 +48,11 @@ with open(budget_data_csv) as csv_file:
 
         previous_profit = profit
 
-# Calculate average change
+# calculate average change
 total_change = sum(profit_loss[i] - profit_loss[i-1] for i in range(1, len(profit_loss)))
 average_change = total_change / (num_months - 1)
 
+# designate output path
 output_path = os.path.join("/Users/alisonlove/Bootcamp/Module Challenges/python-challenge/Analysis/financial.analysis.txt")
 with open(output_path, 'w') as file:
 
@@ -77,22 +76,22 @@ with open(output_path, 'w') as file:
 
 
 
-#ELECTION DATA
+# ELECTION DATA
 
-#set variables
+# set variables
 total_votes = 0
 candidates = {}
 winner = ""
 highest_votes = 0
         
-#csv path
+# csv path
 election_data_csv = os.path.join("/Users/alisonlove/Bootcamp/Module Challenges/python-challenge/Resources/election_data.csv")
 
-#open and read csv
+# open and read csv
 with open(election_data_csv) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
 
-    #store the header
+    # store the header
     election_header = next(csv_reader)
 
     for row in csv_reader:
@@ -104,16 +103,17 @@ with open(election_data_csv) as csv_file:
         else:
             candidates[candidate] = 1
 
-#analyze the results
+# analyze the results
 for candidate, votes in candidates.items():
     if votes > highest_votes:
         highest_votes = votes
         winner = candidate
 
+# designate output path
 output_path = os.path.join("/Users/alisonlove/Bootcamp/Module Challenges/python-challenge/Analysis/election.analysis.txt")
 with open(output_path, 'w') as file:
 
- # Write and print the results to the file and console respectively
+ # write and print the results to the file and console respectively
     file.write("Election Analysis\n")
     file.write("---------------------------\n")
     file.write(f"Total Votes: {total_votes}\n")
