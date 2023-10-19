@@ -10,7 +10,7 @@ The first set of data we have is a csv file that gives financial data for a comp
 
 The second set of data is another csv file. This one provides election information organized by the voter's ballot ID number, the voter's county, and the voter's chosen candidate. In order to make this information more useful, we broke the data down into:
 1. The total number of votes cast in the election
-2. The name of each candidate in the election, with each's corresponding percentage of the total votes and number of votes received
+2. The name of each candidate in the election, with the corresponding percentage of the total votes received and number of votes received
 
 AND MOST IMPORTANTLY
 
