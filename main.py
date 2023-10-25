@@ -14,7 +14,7 @@ decrease_month = None
 previous_profit = None
 
 # path to csv
-budget_data_csv = os.path.join("/Users/alisonlove/Bootcamp/Module Challenges/python-challenge/Resources/budget_data.csv")
+budget_data_csv = os.path.join("/Users/alisonlove/Bootcamp/python-challenge/Resources/budget_data.csv")
 
 # open and read csv
 with open(budget_data_csv) as csv_file:
@@ -53,7 +53,7 @@ total_change = sum(profit_loss[i] - profit_loss[i-1] for i in range(1, len(profi
 average_change = total_change / (num_months - 1)
 
 # designate output path
-output_path = os.path.join("/Users/alisonlove/Bootcamp/Module Challenges/python-challenge/Analysis/financial.analysis.txt")
+output_path = os.path.join("/Users/alisonlove/Bootcamp/python-challenge/Analysis/financial.analysis.txt")
 with open(output_path, 'w') as file:
 
     file.write("Financial Analysis\n")
@@ -85,7 +85,7 @@ winner = ""
 highest_votes = 0
         
 # csv path
-election_data_csv = os.path.join("/Users/alisonlove/Bootcamp/Module Challenges/python-challenge/Resources/election_data.csv")
+election_data_csv = os.path.join("/Users/alisonlove/Bootcamp/python-challenge/Resources/election_data.csv")
 
 # open and read csv
 with open(election_data_csv) as csv_file:
@@ -110,7 +110,7 @@ for candidate, votes in candidates.items():
         winner = candidate
 
 # designate output path
-output_path = os.path.join("/Users/alisonlove/Bootcamp/Module Challenges/python-challenge/Analysis/election.analysis.txt")
+output_path = os.path.join("/Users/alisonlove/Bootcamp//python-challenge/Analysis/election.analysis.txt")
 with open(output_path, 'w') as file:
 
  # write and print the results to the file and console respectively
